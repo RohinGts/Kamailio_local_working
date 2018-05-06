@@ -1,0 +1,96 @@
+1  wget -qO - https://download.jitsi.org/jitsi-key.gpg.key | sudo apt-key add -
+    2  sudo sh -c "echo 'deb https://download.jitsi.org stable/' > /etc/apt/sources.list.d/jitsi-stable.list"
+    3  sudo apt-get -y update
+    4  apt-get -y install jitsi-meet
+    5  jitsi
+    6  apt-get -y install jitsi-videobridge
+    7  apt-get -y install jicofo
+    8  jicofo
+    9  jigasi
+   10  apt-get install mysql-server
+   11  wget http://deb.kamailio.org/kamailiodebkey.gpg
+   12  apt-key add kamailiodebkey.gpg 
+   13  echo "deb http://deb.kamailio.org/kamailio41 precise main" >> /etc/apt/sources.list
+   14  apt-get update
+   15  apt-get install kamailio kamailio-mysql-modules kamailio-nth kamailio-utils-modules rtpproxy
+   16  ifconfig 
+   17  ping localhost
+   18  cat /etc/resolv.conf 
+   19  ping 10.0.2.15
+   20  nano /etc/kamailio/kamctlrc 
+   21  kamctl add userx ifpb
+   22  kambc
+   23  kamdbctl create
+   24  nano /etc/kamailio/kamctlrc 
+   25  kamdbctl create
+   26  kamctl add userx ifpb
+   27  kamctl add usery ifpb
+   28  route
+   29  ifconfig
+   30  kamctl alias_db add alexandre@10.0.2.15 userx@10.0.2.15
+   31  kamctl alias_db add rohin@10.0.2.15 usery@10.0.2.15
+   32  nano /etc/kamailio/kamailio.cfg 
+   33  nano /etc/default/rtpproxy 
+   34  /etc/init.d/rtpproxy restart
+   35  nano /etc/default/kamailio 
+   36  /etc/init.d/kamailio restart
+   37  cd /usr/lib/i386-linux-gnu/kamailio/modules/
+   38  ls
+   39  hostname
+   40  halt
+   41  ifconfig 
+   42  nano /etc/kamailio/kamctlrc 
+   43  kamctl alias_db add user1@192.168.56.101 userx@192.168.56.101
+   44  kamctl alias_db add user2@192.168.56.101 usery@192.168.56.101
+   45  nano /etc/default/rtpproxy 
+   46  /etc/init.d/rtpproxy restart
+   47  /etc/init.d/kamailio restart
+   48  passwd userx
+   49  halt
+   50  apt-get install git
+   51  cd /etc/kamailio/
+   52  ls
+   53  git init
+   54  git add .
+   55  git config --global user.name "RohinGts"
+   56  git commit -m "Kamailio"
+   57  git config --global user.email "rohin1385@gmail.com"
+   58  git remote add origin git@github.com:RohinGts/Kamailio_local_working.git
+   59  git push origin master
+   60  git remote add origin https://github.com/RohinGts/Kamailio_local_working.git
+   61  git remote set-url https://github.com/RohinGts/Kamailio_local_working.git
+   62  git remote set-url origin https://github.com/RohinGts/Kamailio_local_working.git
+   63  git push origin master
+   64  git branch
+   65  git branch list
+   66  git add .
+   67  git commit -m "kamailio"
+   68  git push origin master
+   69  cd /etc/default/rtpproxy 
+   70  cd /etc/default/
+   71  ls
+   72  git init .
+   73  git checkout -b "proxy"
+   74  git add rtpproxy 
+   75  git commit -m "rtpproxy"
+   76  git remote set-url origin https://github.com/RohinGts/Kamailio_local_working.git
+   77  git push origin proxy
+   78  git remote set-url origin https://github.com/RohinGts/Kamailio_local_working.git
+   79  cp rtpproxy /etc/kamailio/
+   80  cd /etc/kamailio/
+   81  git init
+   82  git add .
+   83  git commit -m "With_rtp"
+   84  git checkout -b "master"
+   85  git checkout master
+   86  git push origin master
+   87  halt
+   88  apt-get install docker
+   89  docker login
+   90  apt install docker.io
+   91  docker login
+   92  docker images
+   93  history
+   94  rm /etc/kamailio/rtpproxy 
+   95  cd /etc/kamailio/
+   96  ls
